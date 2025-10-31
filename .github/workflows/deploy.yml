@@ -1,0 +1,28 @@
+name: 🚀 Deploy to Server
+
+on:
+  push:
+    branches: [ "main" ]   
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Deploy to risk-sma.kz
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: 194.32.142.39
+          username: ubuntu
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd ~/risk-sma
+            git pull
+            sudo docker stop app || true
+            sudo docker rm app || true
+            sudo docker build -t risk-sma .
+            sudo docker run -d --name app \
+              -p 127.0.0.1:3000:3000 \
+              --env-file ./.env.local \
+              --restart unless-stopped \
+              risk-sma
