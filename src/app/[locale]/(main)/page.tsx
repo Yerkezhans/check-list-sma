@@ -305,6 +305,7 @@ function PairRecommendations({ me, partner }: { me: Status | null; partner: Stat
             key={i}
             className="flex items-start gap-3 rounded-xl px-3 py-2"
             whileHover={{ y: -1 }}
+            whileTap={{ scale: 0.985 }}
             style={{ background: "rgba(255,255,255,0.04)" }}
           >
             <span
@@ -322,7 +323,6 @@ function PairRecommendations({ me, partner }: { me: Status | null; partner: Stat
     </motion.div>
   );
 }
-
 
 export default function SMAAppV6() {
   const t = useTranslations();
@@ -368,6 +368,7 @@ export default function SMAAppV6() {
           <motion.div
             className="h-10 w-10 grid place-items-center rounded-2xl shadow-lg"
             whileHover={{ rotate: -6, scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
             style={{ background: "linear-gradient(135deg, #3D7BF7, #11A97D)" }}
           >
@@ -402,6 +403,7 @@ export default function SMAAppV6() {
                     className="mx-auto mb-6 h-24 w-24 rounded-3xl grid place-items-center"
                     style={{ background: "rgba(255,255,255,0.08)" }}
                     whileHover={{ rotate: 6 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     <span className="font-bold tracking-wider" style={{ color: THEME.text }}>
                       DNA
@@ -443,6 +445,7 @@ export default function SMAAppV6() {
                   onClick={() => setStep("start")}
                   className="text-sm mb-3"
                   whileHover={{ x: -2 }}
+                  whileTap={{ scale: 0.98 }}
                   style={{ color: THEME.muted }}
                 >
                   {t("ui.back")}
@@ -479,6 +482,7 @@ export default function SMAAppV6() {
                     }}
                     className="text-sm"
                     whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                     style={{ color: THEME.muted }}
                   >
                     {t("ui.reset")}
@@ -521,6 +525,7 @@ export default function SMAAppV6() {
                       onClick={() => setStep("form")}
                       className="text-sm mb-2"
                       whileHover={{ x: -2 }}
+                      whileTap={{ scale: 0.98 }}
                       style={{ color: THEME.muted }}
                     >
                       {t("ui.back")}
@@ -563,6 +568,7 @@ export default function SMAAppV6() {
                     onClick={resetAll}
                     className="rounded-full px-5 py-2.5 font-semibold border"
                     whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                     style={{ borderColor: THEME.border, color: THEME.text }}
                   >
                     {t("ui.again")}
@@ -766,6 +772,7 @@ function CuteTips({ items }: { items: string[] }) {
             key={i}
             className="flex items-start gap-3 rounded-xl px-3 py-2"
             whileHover={{ y: -1 }}
+            whileTap={{ scale: 0.985 }}
             style={{ background: "rgba(255,255,255,0.04)" }}
           >
             <span className="mt-0.5 shrink-0 rounded-full p-1" style={{ background: "rgba(255,255,255,0.06)" }}>
