@@ -13,7 +13,7 @@
     "@headlessui/react": "^2.2.0",
     "axios": "^1.8.4",
     "clsx": "^2.1.1",
-    "firebase": "^12.4.0",
+    "firebase": "^12.9.0",
     "framer-motion": "^12.6.3",
     "headlessui": "^0.0.0",
     "lucide-react": "^0.546.0",
